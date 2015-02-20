@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/Message" />
+  <xs:element name="Menu">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.microsoft.com/Message" name="MenuResult" type="q1:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ItemModifications">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ItemModificationsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.microsoft.com/Message" name="ItemModificationsResult" type="q2:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessMenuGroupAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ele" nillable="true">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessMenuGroupActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.microsoft.com/Message" name="ProcessMenuGroupActionResult" type="q3:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessMenuItemAction">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ele" nillable="true">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ProcessMenuItemActionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.microsoft.com/Message" name="ProcessMenuItemActionResult" type="q4:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ele" nillable="true">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.microsoft.com/Message" name="AddOrderResult" type="q5:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VoidOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ele" nillable="true">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VoidOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.microsoft.com/Message" name="VoidOrderResult" type="q6:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReopenOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ele" nillable="true">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReopenOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.microsoft.com/Message" name="ReopenOrderResult" type="q7:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ele" nillable="true">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:any minOccurs="0" processContents="lax" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CloseOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.microsoft.com/Message" name="CloseOrderResult" type="q8:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Test">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TestResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.microsoft.com/Message" name="TestResult" type="q9:StreamBody" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

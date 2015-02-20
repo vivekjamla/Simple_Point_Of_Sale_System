@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="POSService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/Message" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPOSService_Menu_InputMessage">
+    <wsdl:part name="parameters" element="tns:Menu" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_Menu_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MenuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_ItemModifications_InputMessage">
+    <wsdl:part name="parameters" element="tns:ItemModifications" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_ItemModifications_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ItemModificationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_ProcessMenuGroupAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMenuGroupAction" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_ProcessMenuGroupAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMenuGroupActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_ProcessMenuItemAction_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMenuItemAction" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_ProcessMenuItemAction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessMenuItemActionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_AddOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrder" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_AddOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_VoidOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:VoidOrder" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_VoidOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VoidOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_ReopenOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReopenOrder" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_ReopenOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReopenOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_CloseOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:CloseOrder" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_CloseOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CloseOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_Test_InputMessage">
+    <wsdl:part name="parameters" element="tns:Test" />
+  </wsdl:message>
+  <wsdl:message name="IPOSService_Test_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TestResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPOSService">
+    <wsdl:operation name="Menu">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPOSService/Menu" message="tns:IPOSService_Menu_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPOSService/MenuResponse" message="tns:IPOSService_Menu_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ItemModifications">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPOSService/ItemModifications" message="tns:IPOSService_ItemModifications_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPOSService/ItemModificationsResponse" message="tns:IPOSService_ItemModifications_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMenuGroupAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPOSService/ProcessMenuGroupAction" message="tns:IPOSService_ProcessMenuGroupAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPOSService/ProcessMenuGroupActionResponse" message="tns:IPOSService_ProcessMenuGroupAction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessMenuItemAction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPOSService/ProcessMenuItemAction" message="tns:IPOSService_ProcessMenuItemAction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPOSService/ProcessMenuItemActionResponse" message="tns:IPOSService_ProcessMenuItemAction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPOSService/AddOrder" message="tns:IPOSService_AddOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPOSService/AddOrderResponse" message="tns:IPOSService_AddOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VoidOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPOSService/VoidOrder" message="tns:IPOSService_VoidOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPOSService/VoidOrderResponse" message="tns:IPOSService_VoidOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReopenOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPOSService/ReopenOrder" message="tns:IPOSService_ReopenOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPOSService/ReopenOrderResponse" message="tns:IPOSService_ReopenOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CloseOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPOSService/CloseOrder" message="tns:IPOSService_CloseOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPOSService/CloseOrderResponse" message="tns:IPOSService_CloseOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Test">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPOSService/Test" message="tns:IPOSService_Test_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPOSService/TestResponse" message="tns:IPOSService_Test_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:service name="POSService" />
+</wsdl:definitions>
